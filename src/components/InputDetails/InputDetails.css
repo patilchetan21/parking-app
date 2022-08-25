@@ -1,0 +1,47 @@
+.input-detail-root{
+    background-image: url('https://wallpaperaccess.com/full/11207.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.input-container{
+    background-color: bisque;
+    border: 1px solid black;
+    padding: 35px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+}
+.submit-btn{
+    display: block;
+    margin: auto;
+    padding: 10px 35px;
+    color: white;
+    border-radius: 10px;
+}
+.input-labels{
+    font-size: larger;
+    margin: 0;
+    font-weight: 500;
+}
+.form-inputs{
+    margin: 20px 0 10px 0px;
+    padding: 5px 20px;
+}
+.navlinks{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 20px 30px;
+    border-radius: 20px;
+    margin: 15px;
+    font-weight: 500;
+    display: inline-block;
+    font-size: larger;
+}

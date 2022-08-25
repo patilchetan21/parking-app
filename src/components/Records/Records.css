@@ -1,0 +1,36 @@
+.records-root{
+    background-image: url('https://wallpaperaccess.com/full/11207.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.record-container{
+    background-color: bisque;
+    border: 1px solid black;
+    padding: 35px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+td, th{
+    border: 1px solid black;
+    font-size: larger;
+
+}
+.navlinks{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 20px 30px;
+    border-radius: 20px;
+    margin: 15px;
+    font-weight: 500;
+    font-size: larger;
+    display: inline-block;
+}
