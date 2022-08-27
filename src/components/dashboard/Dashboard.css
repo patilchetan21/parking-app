@@ -42,7 +42,7 @@
     color: transparent;
     overflow: hidden;
     animation: revealText 1s var(--total) forwards;
-    font-size: -webkit-xxx-large;
+    font-size: 1em;
     padding: 15px;
     background-color: #000;
     border-radius: 10px;
@@ -85,3 +85,10 @@
         transform: translateX(105%);
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .dashboard-root{
+        background-image: url('https://mobimg.b-cdn.net/v3/fetch/f1/f1c364e97117fe475f352ea55e55d02c.jpeg?h=600&r=0.5');
+        flex-direction: column;
+    }
+  }

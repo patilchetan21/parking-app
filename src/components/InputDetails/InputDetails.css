@@ -36,6 +36,13 @@
     width: 80%;
     height: 40px;
 }
+.flex-container{
+    display: flex;
+    
+}
+.flex-container div{
+
+}
 .navlinks{
     text-decoration: none;
     color: white;

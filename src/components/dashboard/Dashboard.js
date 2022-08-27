@@ -16,9 +16,6 @@ export const Dashboard = () => {
         <div className='records'>
             <Link to="records" className="navlinks">Check Garage Records</Link>
         </div>
-        <div className='records'>
-            <Link to="update" className="navlinks update-dropdown">Update Records</Link>
-        </div>
     </div>
   )
 }

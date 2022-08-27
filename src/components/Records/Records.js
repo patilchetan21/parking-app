@@ -40,7 +40,7 @@ export const Records = () => {
                                         <td>{rec.ownerName}</td>
                                         <td>{rec.vehicleNumber}</td>
                                         <td>{rec.checkInTime}</td>
-                                        <td>{}</td>
+                                        <td>{rec.checkOutTime}</td>
                                     </tr>
                                 );
                             })

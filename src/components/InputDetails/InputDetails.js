@@ -8,6 +8,7 @@ export const InputDetails = () => {
     const [ownerName, setOwnerName] = useState('');
     const [checkInTime,setCheckInTime] = useState('00:00');
     const [loader, setLoader] = useState(false);
+    const [checkOutTime,setCheckOutTime] = useState('00:00');
     const handleSubmit = (e) => {
       e.preventDefault();
       setLoader(true);
@@ -17,7 +18,8 @@ export const InputDetails = () => {
         vehicleNumber:vehicleNumber,
         ownerName:ownerName,
         // checkInTime:Timestamp.now(),
-        checkInTime:checkInTime,
+        checkInTime: checkInTime,
+        checkOutTime:checkOutTime,
       })
       .then(()=> {
         alert("Data submitted successfully...");
@@ -28,6 +30,7 @@ export const InputDetails = () => {
       });
       setVehicleNum('');
       setOwnerName('');
+      
     };
 
   return (
@@ -42,8 +45,16 @@ export const InputDetails = () => {
                 <input className='form-inputs' type='text' name='vehicleNumber' value={vehicleNumber} onChange={(e)=>setVehicleNum(e.target.value)} required />
                 <p className='input-labels'>Enter Vehicle Owner Name</p>
                 <input className='form-inputs' type="text" name="ownerName" value={ownerName} onChange={(e)=>setOwnerName(e.target.value)} required />
-                <p className='input-labels'>Check-In Time: </p>
-                <input type="time" name="checkInTime" className="form-inputs" value={checkInTime} onChange={(e)=>setCheckInTime(e.target.value)}/>
+                <div className='flex-container'>
+                  <div>
+                    <p className='input-labels'>Check-In Time_|  </p>
+                    <input type="time" name="checkInTime" className="form-inputs" value={checkInTime} onChange={(e)=>setCheckInTime(e.target.value)}/>
+                  </div>
+                  <div >
+                    <p className='input-labels'>_Check-Out Time </p>
+                    <input type="time" name="checkOutTime" className="form-inputs" value={checkOutTime} onChange={(e)=>setCheckOutTime(e.target.value)}/>
+                  </div>
+                </div>
                 <button className='submit-btn' type="submit" value="Submit" style={{background: loader ? "#2d302d00" : "black"}}>Submit</button>
             </form>
             <hr />
