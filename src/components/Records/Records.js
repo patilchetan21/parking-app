@@ -4,38 +4,7 @@ import { db } from '../firebase'
 import './Records.css'
 
 export const Records = () => {
-    const vRec = [
-        {
-            "srN":1,
-            "vNum": "MH19CA0011",
-            "oName" : "Chetan Patil"
-        },
-        {
-            "srN":2,
-            "vNum": "MH25CP2525",
-            "oName": "Raju Raman"
-        },
-        {
-            "srN":3,
-            "vNum": "MH19CA0011",
-            "oName" : "Chetan Patil"
-        },
-        {
-            "srN":4,
-            "vNum": "MH25CP2525",
-            "oName": "Raju Raman"
-        },
-        {
-            "srN":5,
-            "vNum": "MH19CA0011",
-            "oName" : "Chetan Patil"
-        },
-        {
-            "srN":6,
-            "vNum": "MH25CP2525",
-            "oName": "Raju Raman"
-        }
-    ]
+    
     const [posts,setPosts] = useState([]);
     useEffect(()=>{
         db.collection("inputdetails").onSnapshot(snapshot => {
@@ -52,7 +21,7 @@ export const Records = () => {
                 <table className='recTable'>
                     <thead>
                         <tr>
-                            <th colspan='5'>Total Vehical In Garage: {posts.length}</th>
+                            <th colSpan='5'>Total Vehical In Garage: {posts.length}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -60,17 +29,17 @@ export const Records = () => {
                             <th>Sr. no</th>
                             <th>Owner Name</th>
                             <th>Vehicle Number</th>
-                            <th>Check-in Time</th>
-                            <th>Check-out TIme</th>
+                            <th>Check-in Time (24 hrs)</th>
+                            <th>Check-out TIme (24 hrs)</th>
                         </tr>
                         {
                             posts.map((rec)=>{
                                 return (
-                                    <tr>
-                                        <td>{}</td>
+                                    <tr key={posts.indexOf(rec)}>
+                                        <td>{posts.indexOf(rec) + 1}</td>
                                         <td>{rec.ownerName}</td>
                                         <td>{rec.vehicleNumber}</td>
-                                        <td>{}</td>
+                                        <td>{rec.checkInTime}</td>
                                         <td>{}</td>
                                     </tr>
                                 );

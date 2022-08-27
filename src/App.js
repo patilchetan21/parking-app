@@ -3,6 +3,7 @@ import { Dashboard } from './components/dashboard/Dashboard';
 import { InputDetails } from './components/InputDetails/InputDetails';
 import { Records } from './components/Records/Records';
 import { Route,Routes } from 'react-router-dom';
+import { Update } from './components/Update/Update';
 function App() {
   return (
     <div className="App">
@@ -10,6 +11,7 @@ function App() {
             <Route exact path='/' element={<Dashboard />} />
             <Route exact path='/input-details' element={<InputDetails />} />
             <Route exact path='/records' element={<Records />} />
+            <Route exact path='/update' element={<Update />} />
         </Routes>
         
     </div>

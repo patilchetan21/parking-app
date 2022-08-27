@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import './InputDetails.css'
 import { db } from "../firebase";
 import { Link } from 'react-router-dom';
+// import { Timestamp } from 'firebase/firestore'
 export const InputDetails = () => {
     const [vehicleNumber, setVehicleNum] = useState('');
     const [ownerName, setOwnerName] = useState('');
+    const [checkInTime,setCheckInTime] = useState('00:00');
     const [loader, setLoader] = useState(false);
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -14,10 +16,11 @@ export const InputDetails = () => {
       .add({
         vehicleNumber:vehicleNumber,
         ownerName:ownerName,
-
+        // checkInTime:Timestamp.now(),
+        checkInTime:checkInTime,
       })
       .then(()=> {
-        alert("Datasubmitted");
+        alert("Data submitted successfully...");
         setLoader(false);
       })
       .catch((error) => {
@@ -39,6 +42,8 @@ export const InputDetails = () => {
                 <input className='form-inputs' type='text' name='vehicleNumber' value={vehicleNumber} onChange={(e)=>setVehicleNum(e.target.value)} required />
                 <p className='input-labels'>Enter Vehicle Owner Name</p>
                 <input className='form-inputs' type="text" name="ownerName" value={ownerName} onChange={(e)=>setOwnerName(e.target.value)} required />
+                <p className='input-labels'>Check-In Time: </p>
+                <input type="time" name="checkInTime" className="form-inputs" value={checkInTime} onChange={(e)=>setCheckInTime(e.target.value)}/>
                 <button className='submit-btn' type="submit" value="Submit" style={{background: loader ? "#2d302d00" : "black"}}>Submit</button>
             </form>
             <hr />

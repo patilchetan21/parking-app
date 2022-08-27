@@ -21,7 +21,7 @@
 td, th{
     border: 1px solid black;
     font-size: larger;
-
+    text-align: center;
 }
 .navlinks{
     text-decoration: none;
