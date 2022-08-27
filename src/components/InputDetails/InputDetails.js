@@ -59,7 +59,7 @@ export const InputDetails = () => {
             </form>
             <hr />
         </div>
-        <div>
+        <div style={{display:"flex"}}>
           <Link to="/" className='navlinks'>Go to Dashboard</Link>
           <Link to='/records' className='navlinks'>Go to Records</Link>
         </div>

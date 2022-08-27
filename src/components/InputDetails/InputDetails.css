@@ -40,9 +40,6 @@
     display: flex;
     
 }
-.flex-container div{
-
-}
 .navlinks{
     text-decoration: none;
     color: white;
@@ -54,3 +51,19 @@
     display: inline-block;
     font-size: larger;
 }
+
+@media only screen and (max-width: 600px) {
+    .input-detail-root{
+        background-image: url('https://mobimg.b-cdn.net/v3/fetch/f1/f1c364e97117fe475f352ea55e55d02c.jpeg?h=600&r=0.5');
+        flex-direction: column;
+    }
+    .navlinks {
+        padding: 0px 7px;
+        border-radius: 10px;
+        margin: 10px;
+        text-align: center;
+    }
+    .input-container{
+        width: 70%;
+    }
+  }

@@ -15,10 +15,10 @@ export const Records = () => {
   return (
     <div className='records-root'>
         <div className='record-container'>
-            <h1 className='records-heading'>Vehicle Records in Garage</h1>
             <hr />
             <div className='table-container' >
-                <table className='recTable'>
+            <h1 className='records-heading'>Vehicle Records in Garage</h1>
+                <table className='recTable' style={{overflowX:"auto"}}>
                     <thead>
                         <tr>
                             <th colSpan='5'>Total Vehical In Garage: {posts.length}</th>
@@ -48,7 +48,7 @@ export const Records = () => {
                     </tbody>
                 </table>
             </div>
-            <div>
+            <div style={{display:"flex"}}>
                 <Link to="/" className='navlinks'>Go to Dashboard</Link>
                 <Link to="/input-details" className='navlinks'>Add More Records</Link>
             </div>
